@@ -1,0 +1,226 @@
+/* Theme Colors */
+
+:root {
+    --dark-color: #111111;
+    --light-color: #ffffff;
+    --primary-color: #9e44c9;
+    --Secondry-color: #d24949;
+    --gray-color: #7c7c7c42;
+    --linear-gradient: linear-gradient(to left, var(--primary-color), var(--Secondry-color));
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", serif;
+    font-style: normal;
+    color: var(--dark-color);
+    direction: rtl;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+body {
+    background: var(--gray-color);
+}
+
+body .main-container {
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.main-container:before,
+.main-container:after {
+    content: '';
+    display: block;
+    height: 3px;
+
+    background: var(--linear-gradient);
+}
+
+/* Header Site  */
+header h3.title {
+    display: none;
+}
+
+/* Top Bar */
+header #top-bar {
+    height: 40px;
+    line-height: 40px;
+    background: var(--dark-color);
+    padding: 0 20px;
+
+}
+
+/* Page List */
+header #top-bar #PageList1 {
+    float: right;
+    height: 40px;
+    overflow: hidden;
+
+}
+
+
+header #top-bar #PageList1 ul {
+    list-style: none;
+
+}
+
+header #top-bar #PageList1 ul li {
+    display: inline;
+}
+
+header #top-bar #PageList1 ul li a {
+    color: var(--light-color);
+    background: var(--gray-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 10px;
+    margin: 5px 0;
+    transition: all 0.5s;
+
+}
+
+header #top-bar #PageList1 ul li a:hover {
+    background: var(--linear-gradient);
+    color: var(--light-color);
+}
+
+
+/* Social Media */
+header #top-bar #LinkList1 {
+    float: left;
+    margin: 0 5px;
+}
+
+header #top-bar #LinkList1 ul {
+    list-style: none;
+}
+
+header #top-bar #LinkList1 ul li {
+    display: inline;
+}
+
+header #top-bar #LinkList1 ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--light-color);
+
+}
+
+header #top-bar #LinkList1 ul li a i {
+    font-size: 26px;
+    margin: 7px 3px;
+    transition: all 0.5s;
+}
+
+header #top-bar #LinkList1 ul li a i:hover {
+    transform: scale(1.5);
+}
+
+/* لون الايقونات */
+
+header #top-bar #LinkList1 ul li a .facebook::before {
+    content: "\f09a";
+}
+
+header #top-bar #LinkList1 ul li a .fa-facebook {
+    color: #3b5998;
+}
+
+header #top-bar #LinkList1 ul li a .fa-youtube {
+    color: #FF0000;
+}
+
+header #top-bar #LinkList1 ul li a .fa-telegram {
+    color: #24A1DE;
+}
+
+header #top-bar #LinkList1 ul li a .fa-globe {
+    color: var(--gray-color);
+}
+
+header #top-bar #LinkList1 ul li a .fa-square-instagram {
+    color: #C13584;
+}
+
+header #top-bar #LinkList1 ul li a .fa-square-whatsapp {
+    color: #25D366;
+}
+
+header #top-bar #LinkList1 ul li a .fa-twitter {
+    color: #1DA1F2;
+}
+
+header #top-bar #LinkList1 ul li a .fa-wordpress-simple {
+    color: #3b5998;
+}
+
+header #top-bar #LinkList1 ul li a .fa-blogger-b {
+    color: #FF5722;
+}
+
+/* Search Button */
+
+#searchToggle {
+    float: left;
+    background: none;
+    border: none;
+}
+
+#searchToggle i {
+    line-height: 40px;
+    font-size: 26px;
+    color: var(--Secondry-color);
+    cursor: pointer;
+}
+
+header #top-bar {
+    position: relative;
+}
+
+header #top-bar #BlogSearch1 {
+    position: absolute;
+    left: 0;
+    top: 42px;
+    display: none;
+}
+
+header #top-bar #BlogSearch1 form {
+    display: flex;
+    line-height: 40px;
+}
+
+header #top-bar #BlogSearch1 form input {
+    height: 40px;
+    margin: auto 3PX;
+    width: 250px;
+    border-radius: 15px;
+    border: solid 2px var(--linear-gradient);
+}
+
+header #top-bar #BlogSearch1 form input[type="submit"] {
+    width: 50px;
+    cursor: pointer;
+}
+
+header #top-bar #BlogSearch1 i {
+    /* font-size: 20px;
+    margin: 10px 0;
+    transition: all 0.5s;
+    color: var(--light-color); */
+}
