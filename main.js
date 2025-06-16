@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 // document.querySelector('a[href *="facebook"]').innerHTML = '<i class="fa-brands fa-facebook"></i>';
 
 
@@ -49,6 +50,11 @@ document.getElementById("searchToggle").addEventListener("click", function () {
 
     }
   });
+
+
+});
+
+
 
 
 
