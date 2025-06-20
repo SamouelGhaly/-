@@ -26,42 +26,28 @@ window.onload = SocialMediaIcons;
 
 
 
+(function() {
+  let executed = false;
 
+  const insertButtonBeforeSearchBox = () => {
+    const targetElement = document.getElementById("BlogSearch1");
+    if (!targetElement || executed) return;
 
-// نعرّف الدالة اللي هننفذ فيها الكود لما BlogSearch1 يظهر
-function Search1() {
-  let targetElement = document.getElementById("BlogSearch1");
+    // إنشاء الزرار
+    const button = document.createElement("button");
+    button.id = "searchToggle";
+    button.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
 
-  // لو العنصر مش موجود، مانكملش
-  if (!targetElement) return;
+    // إدراج الزرار قبل عنصر البحث
+    targetElement.parentNode.insertBefore(button, targetElement);
 
-  // نجهز الزرار
-  let button = document.createElement("button");
-  button.id = "searchToggle";
-  button.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    executed = true; // علشان ما يتنفذش الكود تاني
+    clearInterval(tryFind); // نوقف التكرار
+  };
 
-  // نضيف الزرار قبل العنصر
-  targetElement.parentNode.insertBefore(button, targetElement);
-
-  // بعد ما نضيف الزرار، نوقف المراقبة
-  observer.disconnect();
-}
-
-// نجهز الـ MutationObserver
-const observer = new MutationObserver((mutationsList, observer) => {
-  // كل مرة بيحصل تغيير في الـ DOM، نشوف إذا العنصر ظهر
-  if (document.getElementById("BlogSearch1")) {
-    insertButtonBeforeSearchBox();
-  }
-});
-
-// نبدأ المراقبة على جسم الصفحة كله (document body)
-observer.observe(document.body, {
-  childList: true,       // راقب إضافة/إزالة عناصر
-  subtree: true          // راقب كل العناصر المتفرعة (مش بس اللي تحت body مباشرة)
-});
-// نفذ الدالة بعد تحميل الصفحة
-Search1()
+  // نحاول نلاقي العنصر كل 500ms
+  const tryFind = setInterval(insertButtonBeforeSearchBox, 500);
+})();
 
 
 
