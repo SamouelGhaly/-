@@ -23,7 +23,7 @@ function SocialMediaIcons() {
 window.onload = SocialMediaIcons;
 
 
-
+/*
 // زر البحث
 // document.querySelector('input[type*="submit"]').outerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
 
