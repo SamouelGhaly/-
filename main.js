@@ -28,7 +28,7 @@ window.onload = SocialMediaIcons;
 // document.querySelector('input[type*="submit"]').outerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
 
 // 1. نجيب العنصر اللي عايزين نضيف قبله (اللي هو BlogSearch1)
-let targetElement = document.getElementById("BlogSearch1");
+let targetElement = document.getElementById("HTML301");
 
 // 2. نجهز الزرار اللي هنضيفه
 let button = document.createElement("button");
@@ -45,7 +45,7 @@ targetElement.parentNode.insertBefore(button, targetElement);
 
 // اخفاء زر البحث
 document.getElementById("searchToggle").addEventListener("click", function () {
-  var box = document.getElementById("BlogSearch1");
+  var box = document.getElementById("HTML301");
   if (box.style.display === "none" || box.style.display === "") {
     box.style.display = "block";
 
