@@ -56,7 +56,7 @@ header h3.title {
 }
 
 /* Top Bar */
-header #top-bar {
+header #header {
     height: 40px;
     line-height: 40px;
     background: var(--dark-color);
@@ -65,7 +65,7 @@ header #top-bar {
 }
 
 /* Page List */
-header #top-bar #PageList1 {
+header #header #PageList1 {
     float: right;
     height: 40px;
     overflow: hidden;
@@ -73,16 +73,16 @@ header #top-bar #PageList1 {
 }
 
 
-header #top-bar #PageList1 ul {
+header #header #PageList1 ul {
     list-style: none;
 
 }
 
-header #top-bar #PageList1 ul li {
+header #header #PageList1 ul li {
     display: inline;
 }
 
-header #top-bar #PageList1 ul li a {
+header #header #PageList1 ul li a {
     color: var(--light-color);
     background: var(--gray-color);
     text-decoration: none;
@@ -95,82 +95,82 @@ header #top-bar #PageList1 ul li a {
 
 }
 
-header #top-bar #PageList1 ul li a:hover {
+header #header #PageList1 ul li a:hover {
     background: var(--linear-gradient);
     color: var(--light-color);
 }
 
 
 /* Social Media */
-header #top-bar #LinkList1 {
+header #header #LinkList1 {
     float: left;
     margin: 0 5px;
 }
 
-header #top-bar #LinkList1 ul {
+header #header #LinkList1 ul {
     list-style: none;
 }
 
-header #top-bar #LinkList1 ul li {
+header #header #LinkList1 ul li {
     display: inline;
 }
 
-header #top-bar #LinkList1 ul li a {
+header #header #LinkList1 ul li a {
     text-decoration: none;
     display: inline-block;
     color: var(--light-color);
 
 }
 
-header #top-bar #LinkList1 ul li a i {
+header #header #LinkList1 ul li a i {
     font-size: 26px;
     margin: 7px 3px;
     transition: all 0.5s;
 }
 
-header #top-bar #LinkList1 ul li a i:hover {
+header #header #LinkList1 ul li a i:hover {
     transform: scale(1.5);
 }
 
 /* لون الايقونات */
 
-header #top-bar #LinkList1 ul li a .facebook::before {
+header #header #LinkList1 ul li a .facebook::before {
     content: "\f09a";
 }
 
-header #top-bar #LinkList1 ul li a .fa-facebook {
+header #header #LinkList1 ul li a .fa-facebook {
     color: #3b5998;
 }
 
-header #top-bar #LinkList1 ul li a .fa-youtube {
+header #header #LinkList1 ul li a .fa-youtube {
     color: #FF0000;
 }
 
-header #top-bar #LinkList1 ul li a .fa-telegram {
+header #header #LinkList1 ul li a .fa-telegram {
     color: #24A1DE;
 }
 
-header #top-bar #LinkList1 ul li a .fa-globe {
+header #header #LinkList1 ul li a .fa-globe {
     color: var(--gray-color);
 }
 
-header #top-bar #LinkList1 ul li a .fa-square-instagram {
+header #header #LinkList1 ul li a .fa-square-instagram {
     color: #C13584;
 }
 
-header #top-bar #LinkList1 ul li a .fa-square-whatsapp {
+header #header #LinkList1 ul li a .fa-square-whatsapp {
     color: #25D366;
 }
 
-header #top-bar #LinkList1 ul li a .fa-twitter {
+header #header #LinkList1 ul li a .fa-twitter {
     color: #1DA1F2;
 }
 
-header #top-bar #LinkList1 ul li a .fa-wordpress-simple {
+header #header #LinkList1 ul li a .fa-wordpress-simple {
     color: #3b5998;
 }
 
-header #top-bar #LinkList1 ul li a .fa-blogger-b {
+header #header #LinkList1 ul li a .fa-blogger-b {
     color: #FF5722;
 }
 
@@ -189,23 +189,23 @@ header #top-bar #LinkList1 ul li a .fa-blogger-b {
     cursor: pointer;
 }
 
-header #top-bar {
+header #header {
     position: relative;
 }
 
-header #top-bar #BlogSearch1 {
+header #header #BlogSearch1 {
     position: absolute;
     left: 0;
     top: 42px;
     display: none;
 }
 
-header #top-bar #BlogSearch1 form {
+header #header #BlogSearch1 form {
     display: flex;
     line-height: 40px;
 }
 
-header #top-bar #BlogSearch1 form input {
+header #header #BlogSearch1 form input {
     height: 40px;
     margin: auto 3PX;
     width: 250px;
@@ -213,12 +213,12 @@ header #top-bar #BlogSearch1 form input {
     border: solid 2px var(--linear-gradient);
 }
 
-header #top-bar #BlogSearch1 form input[type="submit"] {
+header #header #BlogSearch1 form input[type="submit"] {
     width: 50px;
     cursor: pointer;
 }
 
-header #top-bar #BlogSearch1 i {
+header #header #BlogSearch1 i {
     /* font-size: 20px;
     margin: 10px 0;
     transition: all 0.5s;
