@@ -1,58 +1,3 @@
-(function() {
-  let executed = false;
-
-  const insertButtonBeforeSearchBox = () => {
-    const targetElement = document.getElementById("BlogSearch1");
-    if (!targetElement || executed) return;
-
-    // إنشاء الزرار
-    const button = document.createElement("button");
-    button.id = "searchToggle";
-    button.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
-
-    // إدراج الزرار قبل عنصر البحث
-    targetElement.parentNode.insertBefore(button, targetElement);
-
-    executed = true; // علشان ما يتنفذش الكود تاني
-    clearInterval(tryFind); // نوقف التكرار
-  };
-
-  // نحاول نلاقي العنصر كل 500ms
-  const tryFind = setInterval(insertButtonBeforeSearchBox, 500);
-})();
-
-
-
-
-
-// اخفاء زر البحث
-document.getElementById("searchToggle").addEventListener("click", function () {
-  var box = document.getElementById("BlogSearch1");
-  if (box.style.display === "none" || box.style.display === "") {
-    box.style.display = "block";
-
-  } else {
-    box.style.display = "none";
-
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // طريقة اخري لتغير وسائل التواصل الاجتماعي
 
 function SocialMediaIcons() {
@@ -76,5 +21,14 @@ function SocialMediaIcons() {
 }
 // نفذ الدالة بعد تحميل الصفحة
 window.onload = SocialMediaIcons;
+
+
+
+
+
+
+
+
+
 
 
