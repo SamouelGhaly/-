@@ -1,33 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-// document.querySelector('a[href *="facebook"]').innerHTML = '<i class="fa-brands fa-facebook"></i>';
+// طريقة اخري لتغير وسائل التواصل الاجتماعي
+
+function SocialMediaIcons() {
+  const iconMap = {
+    youtube: "fa-youtube",
+    facebook: "fa-facebook",
+    twitter: "fa-twitter",
+    instagram: "fa-instagram"
+  };
+  // حدد كل العناصر <a> اللي جوا الـ LinkList1
+  const links = document.querySelectorAll("#LinkList1 a");
+
+  links.forEach(link => {
+    // خزن النص الأصلي وحوله لحروف صغيرة للتأكد
+    let text = link.textContent.trim().toLowerCase();
+    // هنا بنفحص الكلمة ونغير المحتوى حسبها
+    if (iconMap[text]) {
+      link.innerHTML = `<i class="fa ${iconMap[text]}" aria-hidden="true"></i>`;
+    }
+  });
+}
+// نفذ الدالة بعد تحميل الصفحة
+window.onload = SocialMediaIcons;
 
 
 
 
-// وسائل التواصل
 
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "facebook" 
-&& (e.innerHTML = '<i class="fa-brands fa-facebook"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "youtube" 
-&& (e.innerHTML = '<i class="fa fa-youtube" aria-hidden="true"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "blogger" 
-&& (e.innerHTML = '<i class="fa-brands fa-blogger-b"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "wordpress" 
-&& (e.innerHTML = '<i class="fa-brands fa-wordpress-simple"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "twitter" 
-&& (e.innerHTML = '<i class="fa-brands fa-twitter"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "whatsapp" 
-&& (e.innerHTML = '<i class="fa-brands fa-square-whatsapp"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "instagram" 
-&& (e.innerHTML = '<i class="fa-brands fa-square-instagram"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "website" 
-&& (e.innerHTML = '<i class="fa-solid fa-globe"></i>'));
-document.querySelectorAll("a").forEach(e => e.textContent.trim().toLowerCase() === "telegram" 
-&& (e.innerHTML = '<i class="fa-brands fa-telegram"></i>'));
+
+
+
+
+
+
+
 
 // زر البحث
 // document.querySelector('input[type*="submit"]').outerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
-  // 1. نجيب العنصر اللي عايزين نضيف قبله (اللي هو BlogSearch1)
+// 1. نجيب العنصر اللي عايزين نضيف قبله (اللي هو BlogSearch1)
 let targetElement = document.getElementById("BlogSearch1");
 
 // 2. نجهز الزرار اللي هنضيفه
@@ -41,21 +50,12 @@ targetElement.parentNode.insertBefore(button, targetElement);
 
 // اخفاء زر البحث
 document.getElementById("searchToggle").addEventListener("click", function () {
-    var box = document.getElementById("BlogSearch1");
-    if (box.style.display === "none" || box.style.display === "") {
-      box.style.display = "block";
-      
-    } else {
-        box.style.display = "none";
+  var box = document.getElementById("BlogSearch1");
+  if (box.style.display === "none" || box.style.display === "") {
+    box.style.display = "block";
 
-    }
-  });
+  } else {
+    box.style.display = "none";
 
-
+  }
 });
-
-
-
-
-
-  
